@@ -2,17 +2,32 @@
 
 namespace Snake_Ladder_Problem
 {
-    class Program
+    class Snake_And_Ladder
     {
         static void Main(string[] args)
         {
-                int Player1 = 0;
-                Console.WriteLine("WELL COME TO SNAKE LADDER GAME.Player1 Start Game With: "+Player1);
-                Random random = new Random();
-                int Die = random.Next(0, 7);
+            int player1 = 0;
+            int No_Play = 0;
+            int Ladder = 1;
+            int Snake = 2;
+            Random random = new Random();
+            int die = random.Next(0, 7);
+            Random rand = new Random();
+            int option = random.Next(0, 3);
+            {
+               if(option==No_Play)
                 {
-                    Console.WriteLine("Player1 Get A Number:" + Die);
+                    Console.WriteLine("Player at same position " + No_Play);
                 }
+               else if(option==Ladder)
+                {
+                    Console.WriteLine("player moves position with number " + die);
+                }
+               else
+                {
+                    Console.WriteLine("player moves behind by the number: " + die);  
+                }
+            }
         }
     }
 }
